@@ -1,0 +1,131 @@
+// HOME ----------------------------
+#blog{
+  .links{
+    .span4{
+      color: $gray;
+      display: block;
+      text-decoration: none;
+      margin-bottom: 20px;
+      // border: 1px solid $silver;
+      img{
+        width:300px;
+        height: 191px;
+      }
+      p{
+        padding: 20px;
+      }
+
+      >div{
+        border-left: 1px solid $silver;
+        border-right: 1px solid $silver;
+        border-bottom: 1px solid $silver;
+      }
+
+      .leiamais{
+        font-size: 12px;
+        font-family: 'RobotoBold', arial;
+        padding: 20px 20px 20px 40px;
+        background: url('../img/blog-flecha.png') no-repeat left center;
+        a{
+          display: inline;
+          // float: right;
+          img{
+            display: inline;
+          }
+        }
+      }
+
+      .hover{
+        display: none;
+        position: absolute;
+        margin-top: -191px;
+        margin-left: 0px;
+      }
+
+      &:hover{
+        .leiamais{
+          color: $yellow;
+        }
+        .hover{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// PÁGINA INTERNA ------------------
+// @import "social/*.png";
+
+
+#header-blog{
+    height: 120px;
+    background: #000;
+
+  .menu{
+    position: absolute;
+    width: 940px;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: -470px;
+
+    .logo{
+      display: block;
+      float: left;
+      margin-right: 20px;
+      margin-top: 30px;
+    }
+
+    ul{
+      @include horizontal-list;
+      float: right;
+      a{
+        display: block;
+        color: #fff;
+        border-top: 3px solid transparent;
+        text-decoration: none;
+        font-family: 'RobotoBold', Arial;
+        font-size: 15px;
+        padding: 40px 10px 0px 10px;
+        &:hover{
+          border-top: 3px solid $yellow;
+        }
+      }
+
+      .current_page_item a{
+        border-top: 3px solid $yellow;
+      }
+    }
+
+    .social{
+      float: right;
+      margin-left: 20px;
+      margin-top: 43px;
+      a{
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .facebook{
+        @include social-sprite(facebook);
+        &:hover{
+          @include social-sprite(facebook-hover);
+        }
+      }
+
+      .twitter{
+        @include social-sprite(twitter);
+        &:hover{
+          @include social-sprite(twitter-hover);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.wpcf7-form .clearfix p {
+	margin:0 !important;
+}
+
+/* the overlayed element */
+.simple_overlay {
+ 
+    /* must be initially hidden */
+    display:none;
+ 
+    /* place overlay on top of other elements */
+    z-index:10000;
+ 
+    /* styling */
+    background: url('img/bg-lightbox.png') #FFF no-repeat top right;
+ 
+    width:940px;
+    min-height:440px;
+    border:1px solid #666;
+ 
+    /* CSS3 styling for latest browsers */
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+ 
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+    position:absolute;
+    right:-15px;
+    top:-15px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+}
+
+/*lightbox*/
+
+    .close{
+      display: block;
+      position: absolute;
+      background: url('img/fechar-lightbox.png') no-repeat top right;
+      width: 26px;
+      height: 26px;
+      margin: 20px 20px 0 9px;
+    }
+
+  .social{
+    border-top: 1px solid $silver;
+    margin-top: 80px;
+  }
+
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+
+
+  

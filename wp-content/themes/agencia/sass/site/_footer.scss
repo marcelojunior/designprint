@@ -1,0 +1,82 @@
+#footer-top{
+  text-align: center;
+  height: 23px;
+  margin-top: 50px;
+}
+
+footer{
+  background: #000;
+  color: $gray - 80;
+
+  .menu{
+    margin-top: 0px;
+
+    ul{
+      @include horizontal-list;
+      float: left;
+      a{
+        display: block;
+        color: #fff;
+        border-top: 3px solid transparent;
+        text-decoration: none;
+        font-family: 'RobotoBold', Arial;
+        font-size: 15px;
+        padding: 30px 10px 0px 10px;
+        &:hover{
+          border-top: 3px solid $yellow;
+        }
+      }
+
+      .current_page_item a{
+        border-top: 3px solid $yellow;
+      }
+    }
+
+    .social{
+      float: left;
+      margin-left: 20px;
+      margin-top: 33px;
+      a{
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .facebook{
+        @include social-sprite(facebook);
+        &:hover{
+          @include social-sprite(facebook-hover);
+        }
+      }
+
+      .twitter{
+        @include social-sprite(twitter);
+        &:hover{
+          @include social-sprite(twitter-hover);
+        }
+      }
+    }
+  }
+
+  .info{
+    border-top: 1px solid $gray - 80;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 11px;
+    .magee{
+      display: block;
+      float: right;
+    }
+  }
+
+  .g{
+    display: block;
+    position: absolute;
+    background: #000;
+    margin-left: 600px;
+  }
+}

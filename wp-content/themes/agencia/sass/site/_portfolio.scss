@@ -1,0 +1,72 @@
+#portfolio{
+  .imgs{
+    a{
+      display: block;
+      margin-bottom: 20px;
+      img{
+        width: 300px;
+        height: 191px;
+      }
+      .hover{
+        display: none;
+        position: absolute;
+        margin-top: -191px;
+        margin-left: 0px;
+      }
+
+      &:hover{
+        .hover{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .select-cont{
+    position: absolute;
+    margin-left: 400px;
+    min-width:110px;
+    min-height:43px;
+  }
+
+  #categorias_iconselect {
+    padding: 10px;
+    color: #000;
+    font-size: 12px;
+    border: 1px solid $silver;
+    border-bottom: 2px solid $silver;
+    outline: none;
+    font-family: "RobotoBold", arial;
+    padding-right: 40px;
+    background: url('../img/select-on.png') no-repeat right bottom;
+    &:hover{
+      background: url('../img/select-off.png') no-repeat right bottom;
+    }
+
+  }
+  #categorias_holder {
+    display:none;
+    position:absolute;
+    overflow: auto;
+    width: 150px;
+    padding:0 3px;
+    border: 1px solid $silver;
+    padding: 20px 10px;
+    background: #fff;
+  }
+  .selectitems {
+    font-family: "RobotoBold", arial;
+    font-size: 12px;
+  }
+  .selectitems span {
+    // margin-left: 5px;
+  }
+  .hoverclass {
+    color: $yellow;
+    cursor:pointer;
+  }
+  .selectedclass {
+    color: $yellow;
+  }
+
+}

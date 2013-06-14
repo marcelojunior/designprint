@@ -1,0 +1,66 @@
+#contato{
+  // position: relative;
+  form{
+    @include clearfix;
+    width: 100%;
+    padding-left: 20px;
+  }
+  input[type="text"], textarea{
+    padding: 10px;
+    color: $gray;
+    border: 1px solid $silver;
+    border-bottom: 2px solid $silver;
+    outline: none;
+    font-family: "RobotoLight", arial;
+    margin-bottom: 10px;
+    width: 94%;
+    &:hover, &:focus{
+      border: 1px solid $gray;
+      border-bottom: 2px solid $gray;
+      color: $gray;
+    }
+  }
+
+  input[id="fone"]{
+    margin-right: 0px;
+    padding-right: 0px;
+    width: 120px;
+    float: left;
+  }
+  input[id="cidade"]{
+    margin-left: 00px;
+    margin-right: 0px;
+    padding-right: 0px;
+    width: 230px;
+    float: right;
+  }
+
+  input[type="submit"]{
+    background: #fff url('../img/submit.png') no-repeat left center;
+    border: none;
+    padding-left: 35px;
+
+    height: 31px;
+    font-family: "RobotoBold", arial;
+    font-size: 12px;
+    color: $silver;
+    &:hover{
+      color: $gray;
+    }
+  }
+
+  #cidade{
+    // margin-left: 10px;
+  }
+
+
+  .mapa{
+    display: block;
+    position: absolute;
+    height: 295px;
+    width: 50%;
+    left: 50%;
+    background: url('../img/mapa.png') no-repeat left center;
+  }
+}
+

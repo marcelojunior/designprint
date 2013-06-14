@@ -1,0 +1,90 @@
+@include addFontFace('RobotoLight', 'roboto-light-webfont');
+@include addFontFace('RobotoRegular', 'roboto-regular-webfont');
+@include addFontFace('RobotoBold', 'roboto-bold-webfont');
+@import "nav/*.png";
+
+body{
+  color: $gray;
+  font-family: 'RobotoRegular', Arial;
+  font-size: 14px;
+  background: url('../img/bg.png') no-repeat top center;
+  // position: relative;
+}
+
+.page{
+  border-top: 1px solid $silver;
+  padding-top: 20px;
+  @include clearfix;
+
+  .menu{
+    // float: right;
+    ul{
+      @include horizontal-list;
+      a{
+        font-size: 12px;
+        font-family: 'RobotoBold', Arial;
+        color: $gray;
+        padding-top: 5px;
+      }
+      .focused{
+        color: $yellow;
+      }
+
+      .topo{
+        a{
+          padding-top: 5px;
+        }
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .mais{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.nav{
+  height: 130px;
+
+  >div{
+    background: image_url('../img/bg-nav.jpg') no-repeat center center;
+    width: 120px;
+    height: 26px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: 30px;
+    padding-left: 35px;
+  }
+
+  a{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .prev{
+    @include nav-sprite(prev);
+    &:hover{
+      @include nav-sprite(prev-hover);
+    }
+  }
+
+  .next{
+    @include nav-sprite(next);
+    &:hover{
+      @include nav-sprite(next-hover);
+    }
+  }
+  .btn_next{
+    @include nav-sprite(next);
+    &:hover{
+      @include nav-sprite(next-hover);
+    }
+  }
+}

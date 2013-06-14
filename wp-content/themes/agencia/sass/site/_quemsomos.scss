@@ -1,0 +1,86 @@
+#quemsomos{
+  // position: relative;
+  .menu{
+    position: absolute;
+    z-index: 2;
+    margin-left: 580px;
+  }
+  margin-top: 50px;
+
+  .span8{
+    padding-top: 30px;
+  }
+
+  .fotos{
+    height: 201px;
+    background: url('../img/bg-quemsomos.jpg') no-repeat 650px center;
+    margin-top: -30px;
+
+    img{
+      margin-right: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+
+    .simple_overlay{
+      text-align: center;
+    }
+
+    .fotos1{
+      float:left;
+      padding-top: 90px;
+    }
+
+    .fotos2{
+      display: none;
+      float: left;
+      padding-top: 90px;
+    }
+
+    .fotos-nav{
+      position: absolute;
+      margin-left: 750px;
+      margin-top: 100px;
+
+      .menos{
+        display: none;
+      }
+    }
+  }
+
+  .cocos{
+    position: absolute;
+    width: 1250px;
+    left: 50%;
+    margin-left: -675px;
+    margin-top: -40px;
+    height: 400px;
+    // border: 1px solid red;
+  }
+  .coco1{
+    position:absolute;
+    width: 1200px;
+    height: 440px;
+    z-index: 1;
+  }
+
+  .coco4{
+    position:absolute;
+    width: 1240px;
+    height: 420px;
+  }
+
+  .coco3{
+    position:absolute;
+    width: 1150px;
+    height: 420px;
+  }
+
+  .coco2{
+    position:absolute;
+    width: 1300px;
+    height: 400px;
+  }
+}

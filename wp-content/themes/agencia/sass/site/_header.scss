@@ -1,0 +1,77 @@
+@import "social/*.png";
+
+
+#header{
+  .slide{
+    cursor:pointer;
+    height: 530px;
+    .text{
+      position: absolute;
+      color: #fff;
+    }
+  }
+
+  .menu{
+    position: absolute;
+    width: 940px;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: -470px;
+
+    .logo{
+      display: block;
+      float: left;
+      margin-right: 20px;
+      margin-top: 30px;
+    }
+
+    ul{
+      @include horizontal-list;
+      float: right;
+      a{
+        display: block;
+        color: #fff;
+        border-top: 3px solid transparent;
+        text-decoration: none;
+        font-family: 'RobotoBold', Arial;
+        font-size: 15px;
+        padding: 40px 10px 0px 10px;
+        &:hover{
+          border-top: 3px solid $yellow;
+        }
+      }
+
+      .current_page_item a{
+        border-top: 3px solid $yellow;
+      }
+    }
+
+    .social{
+      float: right;
+      margin-left: 20px;
+      margin-top: 43px;
+      a{
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .facebook{
+        @include social-sprite(facebook);
+        &:hover{
+          @include social-sprite(facebook-hover);
+        }
+      }
+
+      .twitter{
+        @include social-sprite(twitter);
+        &:hover{
+          @include social-sprite(twitter-hover);
+        }
+      }
+    }
+  }
+}

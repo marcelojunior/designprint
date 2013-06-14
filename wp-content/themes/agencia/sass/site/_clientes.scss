@@ -1,0 +1,42 @@
+#clientes{
+  margin-top: 100px;
+  .logos{
+    @include clearfix;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-top: 1px solid $silver;
+    border-left: 1px solid $silver;
+    min-height: 305px;
+    img{
+      width: 155px;
+      height: 100px;
+    }
+
+    a{
+      display: block;
+      float: left;
+      border-right: 1px solid $silver;
+      border-bottom: 1px solid $silver;
+      img{
+        filter: url('../img/filters.svg#grayscale'); /* Firefox 3.5+ */
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+        
+      }
+
+      &:hover{
+        background: $silver;
+        img{
+          filter: none;
+          -webkit-filter: grayscale(0);
+        }
+      }
+    }
+  }
+
+  .ralador{
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -70px;
+  }
+}

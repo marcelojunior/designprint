@@ -1,0 +1,48 @@
+h1{
+  // float: left;
+  span{
+    display: block;
+    color: $yellow;
+    font-size: 35px;
+    font-family: 'RobotoBold', Arial;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+  }
+  small{
+    display: block;
+    color: $gray;
+    font-size: 30px;
+    font-family: 'RobotoLight', Arial;
+  }
+}
+
+
+h2{
+  font-family: 'RobotoLight', Arial;
+  font-size: 30px;
+}
+
+
+h3{
+  font-family: 'RobotoRegular', Arial;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+strong{
+  color: $dark;
+}
+
+.autor{
+  color: $yellow;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tags{
+  font-family: 'RobotoBold', Arial;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
