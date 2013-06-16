@@ -36,7 +36,7 @@ if($cat_id != null){
 
 $my_port = get_posts($args);
 ?>
-<?php if ( has_post_thumbnail()) the_post_thumbnail('port-thumb'); ?>
+
 <div class="row imgs">
 
 	<?php foreach($my_port as $i => $post): ?>
@@ -45,7 +45,7 @@ $my_port = get_posts($args);
 		<!-- VERIFICAR SE EH VIDEO, AUDIO, OU FOTO -->
 		<?php if(get_field('foto_port_345x460') != null):?>
 			<?php $image = wp_get_attachment_image_src(get_field('foto_port_345x460'),'full'); ?>
-			<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>" />
+			<img src="<?php echo image_resize_crop($image[0],300,191); ?>" alt="<?php echo get_the_title(get_field('logo')) ?>" />
 			<img src="<?php bloginfo('template_directory'); ?>/img/portfolio-hover.png" class="hover">
 		<?php endif; ?>
 
@@ -72,9 +72,8 @@ $my_port = get_posts($args);
 					<?php elseif(get_field('iframe_sound_cloud_port') != null): ?>
 						<?php  echo get_field('iframe_sound_cloud_port');?>
 					<?php else: ?>
-						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'high'); ?>
-						<img src="<?php echo $image345[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"
-						width="345px" heigth="460px"/>
+						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'thumb_portifa_over'); ?>
+						<img src="<?php echo image_resize_crop($image345[0],345,430); ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"/>
 					<?php endif; ?>
 				</div>
 				<div class="span6">
