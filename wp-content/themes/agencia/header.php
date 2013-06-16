@@ -69,9 +69,8 @@
               <?php elseif(get_field('iframe_soundcloud') != null): ?>
                 <?php  echo get_field('iframe_soundcloud');?>
               <?php else: ?>
-                <?php $image300 = wp_get_attachment_image_src(get_field('foto_345x460'), 'high'); ?>
-                <img src="<?php echo $image300[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"
-                width="345px" heigth="460px"/>
+                <?php $image300 = wp_get_attachment_image_src(get_field('foto_345x460'), 'full'); ?>
+                <img src="<?php echo image_resize_crop($image300[0],345,430); ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"/>
               <?php endif; ?>
 
             </div>

@@ -11,8 +11,8 @@
 	<?php foreach($my_posts as $i => $post): ?>
 
 	<a href="<?php echo get_permalink(); ?>" class="span4">
-		<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'medium'); ?>
-		<img src="<?php echo $image[0]; ?>" alt="<?php echo the_title(); ?>" />
+		<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'full'); ?>
+		<img src="<?php echo image_resize_crop($image[0],300,191); ?>" alt="<?php echo the_title(); ?>" />
 		<!-- <img src="http://placehold.it/300x191" alt=""/> -->
 		<img src="<?php bloginfo('template_directory'); ?>/img/portfolio-hover.png" class="hover">
 		<div>
