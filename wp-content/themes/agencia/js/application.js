@@ -108,3 +108,20 @@ function aplica_overlay(){
       }
   });
 };
+
+// Zoom da imagem de portfolio
+$('#port-foto img').live('mouseleave', function(){
+  $('#port-foto').removeClass('span12');
+  $('#port-foto').addClass('span5');
+
+  $('#port-texto').show();
+  console.log('leave');
+});
+
+$('#port-foto img').live('mouseover', function(){
+  $('#port-foto').removeClass('span5');
+  $('#port-foto').addClass('span12');
+
+  $('#port-texto').hide();
+  console.log('over');
+});

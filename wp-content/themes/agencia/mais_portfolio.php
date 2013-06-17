@@ -66,17 +66,17 @@ $my_port = get_posts($args);
 	<div class="simple_overlay" id="lightbox_<?php echo $post->ID ?>">
 		<div class="container">
 			<div class="span12" style="margin:20px 0 0 0;">
-				<div class="span5">
+				<div id="port-foto" class="span5">
 					<?php if(get_field('id_youtube_port') != null): ?>
 						<?php  echo '<iframe width="300" height="400" src="http://www.youtube.com/embed/'. get_field('id_youtube_port')  . '?rel=0" frameborder="0" allowfullscreen></iframe>';?>
 					<?php elseif(get_field('iframe_sound_cloud_port') != null): ?>
 						<?php  echo get_field('iframe_sound_cloud_port');?>
 					<?php else: ?>
-						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'thumb_portifa_over'); ?>
-						<img src="<?php echo image_resize_crop($image345[0],345,430); ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"/>
+						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'full'); ?>
+						<img src="<?php echo $image345[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"/>
 					<?php endif; ?>
 				</div>
-				<div class="span6">
+				<div id="port-texto" class="span6">
 					<a href="#" class="fechar"></a>
 					<h2><?php the_title();?></h2>
 
