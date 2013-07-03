@@ -3,6 +3,7 @@
 		<h1 class="span5">
 			<span>BLOG</span>
 			<small>Compartilhamos ideias</small>
+			<br>
 		</h1>
 
 		<div class="menu span5 pull-right">

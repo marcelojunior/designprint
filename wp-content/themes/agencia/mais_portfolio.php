@@ -103,8 +103,8 @@ echo $nomeCategoria;
 					</div>
 
 					<div class="social">
-						<a href="javascript:void(0);" style="display:inline;"><img src="<?php bloginfo('template_directory'); ?>/img/icon-fb.png" alt="" style="width:20px;height:20px;margin:5px;"/></a>
-						<a href="javascript:void(0);" style="display:inline;"><img src="<?php bloginfo('template_directory'); ?>/img/icon-twitter.png" alt="" style="width:20px;height:20px;margin:5px;"/></a>
+						<a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" style="display:inline;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/img/icon-fb.png" alt="" style="width:20px;height:20px;margin:5px;"/></a>
+						<a href="https://twitter.com/share?url=<?php echo get_permalink(); ?>&text=<?php the_title(); ?> - <?php echo get_permalink(); ?>" style="display:inline;" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/img/icon-twitter.png" alt="" style="width:20px;height:20px;margin:5px;"/></a>
 					</div>
 				</div>
 

@@ -41,7 +41,7 @@ Template Name: Contato
 		</div>
 
 		<div class="span5 pull-right">
-            <a href="http://goo.gl/maps/pYtnD" class="mapa"></a>
+            <a href="http://goo.gl/maps/pYtnD" class="mapa" target="_blank"></a>
         </div>
 
 	</div>

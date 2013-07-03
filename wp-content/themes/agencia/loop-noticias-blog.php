@@ -8,6 +8,7 @@
             <h1 class="span5">
               <span>BLOG</span>
               <small>Compartilhamos ideias</small>
+              <br>
             </h1>
           </div>
 
@@ -23,7 +24,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="span6">
+            <div class="span5 pull-right">
               <h2><?php the_title(); ?></h2>
 
               <div class="autor">
@@ -37,8 +38,8 @@
               </div>
 
               <div class="social">
-                <a href="https://www.facebook.com/designprintpropaganda"><img src="/designprint/img/icon-fb.png" alt=""/></a>
-                <a href="javascript:void(0);"><img src="/designprint/img/icon-twitter.png" alt=""/></a>
+                <a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank"><img src="/designprint/img/icon-fb.png" alt=""/></a>
+                <a href="https://twitter.com/share?url=<?php echo get_permalink(); ?>&text=<?php the_title(); ?> - <?php echo get_permalink(); ?>" target="_blank"><img src="/designprint/img/icon-twitter.png" alt=""/></a>
               </div>
 
               <!-- <div class="tags">
