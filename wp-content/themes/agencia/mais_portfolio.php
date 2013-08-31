@@ -44,8 +44,8 @@ $my_port = get_posts($args);
 	<a href="javascript:void(0);" class="span4" rel="#lightbox_<?php echo $post->ID ?>">
 		<!-- VERIFICAR SE EH VIDEO, AUDIO, OU FOTO -->
 		<?php if(get_field('foto_port_345x460') != null):?>
-			<?php $image = wp_get_attachment_image_src(get_field('foto_port_345x460'),'full'); ?>
-			<img src="<?php echo image_resize_crop($image[0],300,191); ?>" alt="<?php echo get_the_title(get_field('logo')) ?>" />
+			<?php $image = wp_get_attachment_image_src(get_field('foto_port_345x460'),'thumb_portifa'); ?>
+			<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>" />
 			<img src="<?php bloginfo('template_directory'); ?>/img/portfolio-hover.png" class="hover">
 		<?php endif; ?>
 
@@ -64,19 +64,19 @@ $my_port = get_posts($args);
 
 	<!-- overlay -->
 	<div class="simple_overlay" id="lightbox_<?php echo $post->ID ?>">
-		<div class="container">
+		<div class="container" style="height: 480px;">
 			<div class="span12" style="margin:20px 0 0 0;">
-				<div id="port-foto" class="span5">
+				<div class="span5">
 					<?php if(get_field('id_youtube_port') != null): ?>
 						<?php  echo '<iframe width="300" height="400" src="http://www.youtube.com/embed/'. get_field('id_youtube_port')  . '?rel=0" frameborder="0" allowfullscreen></iframe>';?>
 					<?php elseif(get_field('iframe_sound_cloud_port') != null): ?>
 						<?php  echo get_field('iframe_sound_cloud_port');?>
 					<?php else: ?>
-						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'full'); ?>
+						<?php $image345 = wp_get_attachment_image_src(get_field('foto_port_345x460'), 'thumb_portifa'); ?>
 						<img src="<?php echo $image345[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>"/>
 					<?php endif; ?>
 				</div>
-				<div id="port-texto" class="span6">
+				<div class="span6">
 					<a href="#" class="fechar"></a>
 					<h2><?php the_title();?></h2>
 
