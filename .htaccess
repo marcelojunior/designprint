@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.designprint.com.br [NC]
+RewriteRule ^(.*)$ https://www.facebook.com/designprintpropaganda$1 [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^designprint.com.br [NC]
+RewriteRule ^(.*)$ https://www.facebook.com/designprintpropaganda$1 [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^novo\.designprint\.com.br$
+RewriteCond %{REQUEST_URI} !^/novo/
+RewriteRule (.*) /novo/$1

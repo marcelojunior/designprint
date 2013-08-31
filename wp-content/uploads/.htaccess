@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^/?$ "http\:\/\/www\.facebook\.com\/designprintpropaganda" [R=301,L]
+
