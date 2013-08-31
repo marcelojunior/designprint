@@ -16,8 +16,8 @@
 
           <div class="row">
             <div class="span6 images_blog">
-              	<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'full'); ?>
-				        <img src="<?php echo image_resize_crop($image[0],460,277); ?>" alt="<?php echo the_title(); ?>" style="display: block; margin-bottom: 30px;"/>
+              	<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'thumbnail_blog'); ?>
+				        <img src="<?php echo $image[0]; ?>" alt="<?php echo the_title(); ?>" style="display: block; margin-bottom: 30px;"/>
                 <?php if(get_field('link_video_youtube') != null): ?>
               	   <iframe width="460" height="277" src="<?php echo get_field('link_video_youtube'); ?>" frameborder="0" allowfullscreen></iframe>
                 <?php endif; ?>
@@ -61,8 +61,8 @@
 		 	<?php foreach($my_posts as $i => $post): ?>
       <div class="items_blog">
 				 <a href="<?php echo get_permalink(); ?>" class="span4">
-				 	<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'medium'); ?>
-				 	<img src="<?php echo image_resize_crop($image[0],300,191); ?>" alt="<?php echo the_title(); ?>" />
+				 	<?php $image = wp_get_attachment_image_src(get_field('foto_noticia'), 'thumbnail'); ?>
+				 	<img src="<?php echo $image[0]; ?>" alt="<?php echo the_title(); ?>" />
 				 	<!-- <img src="http://placehold.it/300x191" alt=""/> -->
 				 	<img src="<?php bloginfo('template_directory'); ?>/img/portfolio-hover.png" class="hover">
 
