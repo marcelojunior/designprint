@@ -38,7 +38,8 @@ $(document).ready(function(){
   aplica_overlay();
 
   $(".slidetabs").tabs(".images > .slidetab_header", {
-    rotate: true
+    rotate: true,
+    auto: true
   }).slideshow({
     clickable: false
   });
