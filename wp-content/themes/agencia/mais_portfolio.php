@@ -44,13 +44,13 @@ $my_port = get_posts($args);
 	<a href="javascript:void(0);" class="span4" rel="#lightbox_<?php echo $post->ID ?>">
 		<!-- VERIFICAR SE EH VIDEO, AUDIO, OU FOTO -->
 		<?php if(get_field('foto_port_345x460') != null):?>
-			<?php $image = wp_get_attachment_image_src(get_field('foto_port_345x460'),'thumb_portifa'); ?>
+			<?php $image = wp_get_attachment_image_src(get_field('foto_port_345x460'),'thumbnail'); ?>
 			<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>" />
 			<img src="<?php bloginfo('template_directory'); ?>/img/portfolio-hover.png" class="hover">
 		<?php endif; ?>
 
 		<?php if(get_field('id_youtube_port') != null):?>
-			<?php $image = wp_get_attachment_image_src(get_field('miniatura_foto_video'),'full'); ?>
+			<?php $image = wp_get_attachment_image_src(get_field('miniatura_foto_video'),'thumbnail'); ?>
 			<img src="<?php echo $image[0]; ?>"/>
 			<img src="<?php bloginfo('template_directory'); ?>/img/video-hover.png" class="hover">
 		<?php endif; ?>
