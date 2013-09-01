@@ -38,8 +38,8 @@
               </div>
 
               <div class="social">
-                <a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank"><img src="/designprint/img/icon-fb.png" alt=""/></a>
-                <a href="https://twitter.com/share?url=<?php echo get_permalink(); ?>&text=<?php the_title(); ?> - <?php echo get_permalink(); ?>" target="_blank"><img src="/designprint/img/icon-twitter.png" alt=""/></a>
+                <a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/img/icon-fb.png" alt=""/></a>
+                <a href="https://twitter.com/share?url=<?php echo get_permalink(); ?>&text=<?php the_title(); ?> - <?php echo get_permalink(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/img/icon-twitter.png" alt=""/></a>
               </div>
 
               <!-- <div class="tags">

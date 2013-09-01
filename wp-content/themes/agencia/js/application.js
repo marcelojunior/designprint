@@ -18,10 +18,10 @@ $(document).ready(function(){
   });
 
   // Rolagem do menu
-  // $('.menu-header a, .menu a, #footer-top a').click(function(){
-  //   $('body').scrollTo($($(this).attr('href')), 800);
-  // });
-  $('.menu-header ul, .menu').onePageNav();
+  $('.menu-header a, .menu a, #footer-top a').click(function(){
+    $('body').scrollTo($($(this).attr('href')), 800);
+  });
+  // $('.menu-header ul, .menu').onePageNav();
 
   //Parallax
   $('.coco1, .coco4, .coco2, .coco3').parallax({

@@ -13,34 +13,36 @@
 
   <div id="header">
 
-    <div class="menu container" style="z-index:100;">
-      <div class="social">
-        <a href="https://www.facebook.com/designprintpropaganda" class="facebook"></a>
-        <a href="#" class="twitter"></a>
+    <div class="menu" style="z-index:100;">
+      <div class="container">
+        <div class="social">
+          <a href="https://www.facebook.com/designprintpropaganda" class="facebook"></a>
+          <a href="https://twitter.com/designprintam" class="twitter"></a>
+        </div>
+
+        <a href="<?php bloginfo('url'); ?>" class="logo">
+          <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="Design Print">
+        </a>
+
+        <div class="menu-header">
+          <ul>
+            <?php if(is_home()): ?>
+              <li><a href="#portfolio">PORTFÓLIO</a></li>
+              <li><a href="#quemsomos">QUEM SOMOS</a></li>
+              <li><a href="#clientes">CLIENTES</a></li>
+              <li><a href="#blog">BLOG</a></li>
+              <li><a href="#contato">CONTATO</a></li>
+            <?php else: ?>
+              <li><a href="<?php bloginfo('url'); ?>/#portfolio">PORTFÓLIO</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/#quemsomos">QUEM SOMOS</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/#clientes">CLIENTES</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/#blog">BLOG</a></li>
+              <li><a href="<?php bloginfo('url'); ?>/#contato">CONTATO</a></li>
+            <?php endif; ?>
+          </ul>
+        </div>        
       </div>
-
-      <a href="<?php bloginfo('url'); ?>" class="logo">
-        <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="Design Print">
-      </a>
-
-      <div class="menu-header">
-        <ul>
-          <?php if(is_home()): ?>
-          <li><a href="#portfolio">PORTFÓLIO</a></li>
-          <li><a href="#quemsomos">QUEM SOMOS</a></li>
-          <li><a href="#clientes">CLIENTES</a></li>
-          <li><a href="#blog">BLOG</a></li>
-          <li><a href="#contato">CONTATO</a></li>
-        <?php else: ?>
-        <li><a href="<?php bloginfo('url'); ?>/#portfolio">PORTFÓLIO</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/#quemsomos">QUEM SOMOS</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/#clientes">CLIENTES</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/#blog">BLOG</a></li>
-        <li><a href="<?php bloginfo('url'); ?>/#contato">CONTATO</a></li>
-      <?php endif; ?>
-    </ul>
-  </div>
-</div>
+    </div>
 
 <!-- container for the slides -->
 <div class="images" style="min-height:530px;">

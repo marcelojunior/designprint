@@ -13,10 +13,13 @@
 
   .menu{
     position: absolute;
-    width: 940px;
-    left: 50%;
-    margin-top: 0px;
-    margin-left: -470px;
+    // width: 940px;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    // margin-left: -470px;
+    padding-bottom: 30px;
+    background: url('../img/bg-header.png');
 
     .logo{
       display: block;
